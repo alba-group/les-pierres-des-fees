@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://alba-group.github.io/les-pierres-des-fees/sitemap.xml
