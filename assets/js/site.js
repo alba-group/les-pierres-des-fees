@@ -4,6 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
     officialStyle.rel = 'stylesheet';
     officialStyle.href = 'assets/css/official-home.css';
     document.head.appendChild(officialStyle);
+
+    const officialLayout = document.createElement('link');
+    officialLayout.rel = 'stylesheet';
+    officialLayout.href = 'assets/css/official-home-layout.css';
+    document.head.appendChild(officialLayout);
   }
 
   const toggle = document.querySelector('.mobile-toggle');
