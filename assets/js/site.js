@@ -1,4 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const addressReplacements = new Map([
+    ['22 rue du vistre, résidence la malamousque dorée, 30 220 Aigues-Mortes', 'Pôle Constance, 165 route de Nîmes, 30220 Aigues-Mortes'],
+    ['Chez les milles et un soins d’Amalya', 'Pôle Constance'],
+    ['Rue des Oliviers, 30640 Beauvoisin', '165 route de Nîmes, 30220 Aigues-Mortes']
+  ]);
+
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  const textNodes = [];
+  while (walker.nextNode()) textNodes.push(walker.currentNode);
+
+  textNodes.forEach(node => {
+    let updatedText = node.nodeValue;
+    addressReplacements.forEach((replacement, oldText) => {
+      updatedText = updatedText.replace(oldText, replacement);
+    });
+    if (updatedText !== node.nodeValue) node.nodeValue = updatedText;
+  });
+
   if (document.body.classList.contains('home-page')) {
     const officialStyle = document.createElement('link');
     officialStyle.rel = 'stylesheet';
