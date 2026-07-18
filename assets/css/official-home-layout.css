@@ -1,0 +1,21 @@
+/* Ajustement ciblé : conserver les dimensions visuelles de l’en-tête après le retrait de la boutique. */
+
+@media (min-width: 1021px) {
+  .home-page .official-menu-row {
+    width: min(100%, 1220px);
+    min-height: 60px;
+    padding: 0 18px;
+  }
+
+  .home-page .official-primary-nav {
+    flex: 1 1 100%;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .home-page .official-primary-nav > a,
+  .home-page .official-primary-nav .drop-trigger {
+    min-height: 59px;
+    padding: 0 18px;
+  }
+}
