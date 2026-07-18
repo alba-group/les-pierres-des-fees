@@ -2,12 +2,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if (document.body.classList.contains('home-page')) {
     const officialStyle = document.createElement('link');
     officialStyle.rel = 'stylesheet';
-    officialStyle.href = 'assets/css/official-home.css';
+    officialStyle.href = 'assets/css/official-home.css?v=20260718-2';
     document.head.appendChild(officialStyle);
 
     const officialLayout = document.createElement('link');
     officialLayout.rel = 'stylesheet';
-    officialLayout.href = 'assets/css/official-home-layout.css';
+    officialLayout.href = 'assets/css/official-home-layout.css?v=20260718-2';
     document.head.appendChild(officialLayout);
   }
 
