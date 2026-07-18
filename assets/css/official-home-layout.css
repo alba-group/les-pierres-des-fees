@@ -1,76 +1,148 @@
-/* Dimensions renforcées de l’en-tête après le retrait des éléments de boutique. */
+/* Ajustements ciblés pour conserver l’identité visuelle de l’en-tête officiel. */
+
+.home-page .official-logo-row {
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 38% 42%, rgba(43,134,164,.05) 0 2px, transparent 3px),
+    radial-gradient(circle at 62% 38%, rgba(43,134,164,.04) 0 2px, transparent 3px),
+    linear-gradient(90deg, rgba(43,134,164,.025), transparent 26%, transparent 74%, rgba(43,134,164,.025));
+}
+
+.home-page .official-logo-row::before,
+.home-page .official-logo-row::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 430px;
+  height: 230px;
+  top: 18px;
+  opacity: .12;
+  background-image: url('https://www.lespierresdesfees.fr/wp-content/uploads/2023/02/logo-e1676286219580.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  filter: saturate(.75);
+}
+
+.home-page .official-logo-row::before {
+  left: 7%;
+  transform: scaleX(-1) rotate(-6deg);
+}
+
+.home-page .official-logo-row::after {
+  right: 7%;
+  transform: rotate(6deg);
+}
+
+.home-page .official-logo {
+  position: relative;
+  z-index: 2;
+}
 
 @media (min-width: 1021px) {
   .home-page .official-topbar-inner {
-    min-height: 54px !important;
-    padding: 0 28px !important;
+    min-height: 43px !important;
+    padding: 0 22px !important;
   }
 
   .home-page .official-phone {
-    font-size: 18px !important;
+    font-size: 15px !important;
   }
 
   .home-page .official-tagline {
-    font-size: 17px !important;
+    font-size: 14px !important;
   }
 
   .home-page .official-account-links {
-    font-size: 14px !important;
-    gap: 24px !important;
+    font-size: 13px !important;
+    gap: 18px !important;
   }
 
   .home-page .official-account-links svg {
-    width: 18px !important;
-    height: 18px !important;
+    width: 15px !important;
+    height: 15px !important;
   }
 
   .home-page .official-logo-row {
-    min-height: 245px !important;
-    padding: 34px 20px 28px !important;
+    min-height: 190px !important;
+    padding: 28px 20px 20px !important;
   }
 
   .home-page .official-logo img {
-    width: 335px !important;
-    max-height: 190px !important;
+    width: 285px !important;
+    max-height: 155px !important;
   }
 
   .home-page .official-menu-row {
-    width: min(100%, 1320px) !important;
-    min-height: 76px !important;
-    padding: 0 24px !important;
+    width: min(100%, 1220px) !important;
+    min-height: 60px !important;
+    padding: 0 18px !important;
+    gap: 18px !important;
   }
 
   .home-page .official-primary-nav {
-    flex: 1 1 100% !important;
-    width: 100% !important;
-    justify-content: space-between !important;
+    flex: 1 1 auto !important;
+    width: auto !important;
+    justify-content: flex-start !important;
   }
 
   .home-page .official-primary-nav > a,
   .home-page .official-primary-nav .drop-trigger {
-    min-height: 75px !important;
-    padding: 0 24px !important;
-    font-size: 21px !important;
+    min-height: 59px !important;
+    padding: 0 13px !important;
+    font-size: 17px !important;
   }
 
-  .home-page .official-primary-nav .dropdown-menu a {
-    font-size: 15px !important;
-    padding: 12px 20px !important;
+  .home-page .official-home-link {
+    width: 42px !important;
+    padding: 0 10px !important;
+  }
+
+  .home-page .official-home-link svg {
+    width: 17px !important;
+    height: 17px !important;
+  }
+
+  .home-page .official-product-search {
+    display: flex !important;
+    flex: 0 0 235px !important;
+    height: 39px !important;
+    margin-left: auto !important;
+  }
+
+  .home-page .official-product-search input[type="search"] {
+    height: 39px !important;
+    font-size: 12px !important;
+  }
+
+  .home-page .official-product-search button {
+    flex: 0 0 45px !important;
+    height: 39px !important;
   }
 }
 
 @media (min-width: 1021px) and (max-width: 1180px) {
-  .home-page .official-logo-row {
-    min-height: 220px !important;
-  }
-
-  .home-page .official-logo img {
-    width: 305px !important;
-  }
-
   .home-page .official-primary-nav > a,
   .home-page .official-primary-nav .drop-trigger {
-    padding: 0 15px !important;
-    font-size: 18px !important;
+    padding: 0 9px !important;
+    font-size: 15px !important;
+  }
+
+  .home-page .official-product-search {
+    flex-basis: 200px !important;
+  }
+
+  .home-page .official-logo-row::before,
+  .home-page .official-logo-row::after {
+    width: 330px;
+    opacity: .09;
+  }
+}
+
+@media (max-width: 1020px) {
+  .home-page .official-logo-row::before,
+  .home-page .official-logo-row::after {
+    display: none;
   }
 }
