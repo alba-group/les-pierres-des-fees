@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
+  if (document.body.classList.contains('home-page')) {
+    const officialStyle = document.createElement('link');
+    officialStyle.rel = 'stylesheet';
+    officialStyle.href = 'assets/css/official-home.css';
+    document.head.appendChild(officialStyle);
+  }
+
   const toggle = document.querySelector('.mobile-toggle');
   const nav = document.querySelector('.nav');
   if (toggle && nav) {
