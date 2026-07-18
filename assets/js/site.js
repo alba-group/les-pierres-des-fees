@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   const addressReplacements = new Map([
-    ['22 rue du vistre, résidence la malamousque dorée, 30 220 Aigues-Mortes', 'Pôle Constance, 165 route de Nîmes, 30220 Aigues-Mortes'],
+    ['22 rue du vistre, résidence la malamousque dorée, 30 220 Aigues-Mortes', 'Pôle Constance, 165 Route de Nîmes, 30220 Aigues-Mortes'],
     ['Chez les milles et un soins d’Amalya', 'Pôle Constance'],
-    ['Rue des Oliviers, 30640 Beauvoisin', '165 route de Nîmes, 30220 Aigues-Mortes']
+    ['Rue des Oliviers, 30640 Beauvoisin', '165 Route de Nîmes, 30220 Aigues-Mortes']
   ]);
 
   const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
