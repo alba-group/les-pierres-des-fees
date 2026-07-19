@@ -47,14 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  const cookie = document.querySelector('.cookie-banner');
-  if (cookie && localStorage.getItem('lpdf-cookie-choice')) cookie.classList.add('hidden');
-  document.querySelectorAll('[data-cookie-choice]').forEach(button => {
-    button.addEventListener('click', () => {
-      localStorage.setItem('lpdf-cookie-choice', button.dataset.cookieChoice || 'saved');
-      cookie?.classList.add('hidden');
-    });
-  });
+  document.querySelector('.cookie-banner')?.remove();
 
   const form = document.querySelector('#contact-form');
   if (form) {
